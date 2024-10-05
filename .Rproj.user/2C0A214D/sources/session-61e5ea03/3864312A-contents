@@ -1,0 +1,4 @@
+scf_data <- read.csv("/Users/rick/Downloads/SCFP2022.csv")
+
+head(scf_data)
+names(scf_data)
