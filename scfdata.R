@@ -155,7 +155,14 @@ desired_column_order <- c(
 new_scf_data <- new_scf_data[, desired_column_order]
 
 write.csv(new_scf_data, file = "/Users/rick/Downloads/scfdata_cleaned.csv", row.names = FALSE)
+rm(list=ls())
 
+scf_data <- read.csv("/Users/rick/Downloads/scfdata_cleaned.csv")
+scf_data$lasset <- log(scf_data$ASSET) 
+View(scf_data)
+
+scf_data$LASSET <- log(scf_data$ASSET)
+scf_data$LCHECKING <- log(scf_data$CHECKING)
 
 
 
