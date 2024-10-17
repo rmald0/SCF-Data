@@ -161,14 +161,25 @@ scf_data <- read.csv("/Users/rick/Downloads/scfdata_cleaned.csv")
 scf_data$lasset <- log(scf_data$ASSET) 
 View(scf_data)
 
+column_names<- data.frame(Column_Names = names(scf_data))
+print(column_names)
+
 scf_data$LASSET <- log(scf_data$ASSET)
 scf_data$LCHECKING <- log(scf_data$CHECKING)
+scf_data$LSAVING <- log(scf_data$SAVING)
+scf_data$LSTOCKS <- log(scf_data$STOCKS)
+scf_data$LLIRAKH <- log(scf_data$IRAKH)
+scf_data$LDEBT <- log(scf_data$DEBT)
+scf_data$LINCOME <- log(scf_data$INCOME)
+scf_data$LNETWORTH <- log(scf_data$NETWORTH) #NA/s produced
+scf_data$LINCOME <- log(scf_data$INCOME)
+#create dummy varibales for occat 1 and 2 
 
-
-
-
-
-
-
-
+scf_data$ASSET <- NULL
+scf_data$CHECKING <- NULL
+scf_data$SAVING <- NULL
+scf_data$STOCKS <- NULL
+scf_data$IRAKH <- NULL
+scf_data$DEBT <- NULL
+scf_data$INCOME <- NULL
 
