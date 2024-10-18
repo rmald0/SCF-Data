@@ -204,7 +204,7 @@ names(scf_data)[names(scf_data) == "OCCUPATION_technical_sales_services"] <- "te
 names(scf_data)[names(scf_data) == "technical/sales/services"] <- "OCCUPATION_technical/sales/services"
 names(scf_data)[names(scf_data) == "OCCAT2_other_manual_labor"] <- "OCCUPATION_other/manual_labor"
 names(scf_data)[names(scf_data) == "OCCAT2_not_working"] <- "OCCUPATION_not_working"
-
+names(scf_data)[names(scf_data) == "LLIRAKH"] <- "LIRAKH"
 View(scf_data)
 
 
@@ -214,3 +214,4 @@ View(scf_data)
 #Ask about KNOWL Respondent's knowledge of personal finances,-1 is not at all knowledgeable. 10 is very knowledgeale.
 
 write.csv(scf_data, file = "scfdata.csv", row.names = FALSE)
+scf_data <- read.csv("scfdata.csv")
